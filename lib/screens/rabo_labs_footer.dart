@@ -1,3 +1,5 @@
+import 'package:rabo_labs/screens/aboutUs.dart';
+import 'package:rabo_labs/screens/faq.dart';
 import 'package:rabo_labs/screens/prices_set.dart';
 import 'package:rabo_labs/screens/rabo_labs_details.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +60,7 @@ class ProfileFooter extends StatelessWidget {
                 subtitle: Text("Frequently Asked Questions"),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MemberProfile()));
+                      MaterialPageRoute(builder: (context) => FaqPage()));
                 })),
         Card(
           color: Color.fromARGB(255, 7, 177, 101),
@@ -67,8 +69,8 @@ class ProfileFooter extends StatelessWidget {
             title: Text("About"),
             subtitle: Text("Know about our work and our proceedings."),
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => MemberProfile()));
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Images()));
             },
           ),
         )
