@@ -38,6 +38,7 @@ dependencies:
   number_inc_dec: ^0.8.0
   material_design_icons_flutter: ^5.0.6595
   flutter_image_slideshow: ^0.1.2
+  image_picker: ^0.8.5
 
 dev_dependencies:
   flutter_test:

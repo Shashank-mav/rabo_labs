@@ -12,19 +12,19 @@ class PriceSet extends StatefulWidget {
 
 class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  late ScrollController _scrollViewController;
+  // late ScrollController _scrollViewController;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(vsync: this, length: 4);
-    _scrollViewController = ScrollController(initialScrollOffset: 0.0);
+    // _scrollViewController = ScrollController(initialScrollOffset: 0.0);
   }
 
   @override
   void dispose() {
     _tabController.dispose();
-    _scrollViewController.dispose();
+    // _scrollViewController.dispose();
     super.dispose();
   }
 
@@ -52,7 +52,7 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Color.fromARGB(250, 235, 255, 250),
       body: NestedScrollView(
-        controller: _scrollViewController,
+        // controller: _scrollViewController,
         headerSliverBuilder: (BuildContext context, bool boxIsScrolled) {
           return <Widget>[
             SliverAppBar(
@@ -68,10 +68,10 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
                     text: "Lab Tests",
                   ),
                   Tab(
-                    text: "Physiotherapy",
+                    text: "Body Scans",
                   ),
                   Tab(
-                    text: "Body Scans",
+                    text: "Physiotherapy",
                   ),
                   Tab(
                     text: "surgery",
@@ -84,29 +84,29 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
         },
         body: TabBarView(
           children: <Widget>[
+            LabTestPrices(),
             BodyScanPrices(),
             PhysiotherapyPrices(),
-            LabTestPrices(),
             surgery()
           ],
           controller: _tabController,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.control_point),
-        onPressed: () {
-          _tabController.animateTo(1,
-              curve: Curves.bounceInOut, duration: Duration(milliseconds: 10));
+      // floatingActionButton: FloatingActionButton(
+      //   child: Icon(Icons.control_point),
+      //   onPressed: () {
+      //     _tabController.animateTo(1,
+      //         curve: Curves.bounceInOut, duration: Duration(milliseconds: 10));
 
-          _scrollViewController.animateTo(
-              _scrollViewController.position.minScrollExtent,
-              duration: Duration(milliseconds: 1000),
-              curve: Curves.decelerate);
+      //     _scrollViewController.animateTo(
+      //         _scrollViewController.position.minScrollExtent,
+      //         duration: Duration(milliseconds: 1000),
+      //         curve: Curves.decelerate);
 
-          _scrollViewController
-              .jumpTo(_scrollViewController.position.maxScrollExtent);
-        },
-      ),
+      //     _scrollViewController
+      //         .jumpTo(_scrollViewController.position.maxScrollExtent);
+      //   },
+      // ),
     );
   }
 }

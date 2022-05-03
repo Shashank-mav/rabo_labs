@@ -16,17 +16,37 @@ class LabTestPrices extends StatelessWidget {
         // )),
         // child:
         ListTile(
-            title: Card(
-          child: Container(
-              child: NumberInputWithIncrementDecrement(
-            controller: TextEditingController(),
-            min: 5,
-            max: 5,
-            scaleWidth: 0.5,
-            buttonArrangement: ButtonArrangement.rightEnd,
-            textAlign: TextAlign.right,
+            title: NumberInputWithIncrementDecrement(
+          controller: TextEditingController(),
+          separateIcons: true,
+          numberFieldDecoration: InputDecoration(
+            constraints: BoxConstraints(maxWidth: 50),
+            isDense: true,
+          ),
+          widgetContainerDecoration: BoxDecoration(
+              border: Border.all(
+            color: Color.fromARGB(250, 235, 255, 250),
           )),
+          incIcon: Icons.add,
+          decIcon: Icons.remove,
+          incIconSize: 30,
+          decIconSize: 30,
+          scaleWidth: 0.2,
+          scaleHeight: 0.3,
+          incIconColor: Color.fromARGB(153, 0, 200, 151),
+          decIconColor: Color.fromARGB(153, 0, 200, 151),
+          incIconDecoration: BoxDecoration(
+              border: Border.all(
+                color: Color.fromARGB(250, 235, 255, 250),
+              ),
+              shape: BoxShape.circle),
+          decIconDecoration: BoxDecoration(
+              border: Border.all(color: Color.fromARGB(250, 235, 255, 250)),
+              shape: BoxShape.circle),
+          buttonArrangement: ButtonArrangement.incRightDecLeft,
+          textAlign: TextAlign.center,
         )),
+        // ),
       ],
     ));
   }

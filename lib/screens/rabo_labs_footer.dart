@@ -14,7 +14,7 @@ class ProfileFooter extends StatelessWidget {
         // color: Color.fromARGB(250, 235, 255, 250),
         child:
             // Scaffold(
-            //     backgroundColor: Color.fromARGB(255, 146, 207, 194),
+            //     backgroundColor: Color.fromARGB(2  55, 146, 207, 194),
             //     body:
             ListView(
       children: [
