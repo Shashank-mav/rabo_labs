@@ -1,5 +1,6 @@
 import 'package:rabo_labs/screens/aboutUs.dart';
 import 'package:rabo_labs/screens/faq.dart';
+import 'package:rabo_labs/screens/history_screen.dart';
 import 'package:rabo_labs/screens/prices_set.dart';
 import 'package:rabo_labs/screens/rabo_labs_details.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +41,7 @@ class ProfileFooter extends StatelessWidget {
                 subtitle: Text("Check your payment settlements"),
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MemberProfile()));
+                      MaterialPageRoute(builder: (context) => HistoryPage()));
                 })),
         Card(
             color: Color.fromARGB(255, 7, 177, 101),

@@ -8,6 +8,7 @@ import 'package:rabo_labs/screens/feed.dart';
 import 'package:rabo_labs/screens/home.dart';
 import 'package:rabo_labs/screens/message.dart';
 import 'package:rabo_labs/screens/rabo_labs_details.dart';
+import 'package:rabo_labs/screens/history_screen.dart';
 
 // ignore: use_key_in_widget_constructors
 class MainScreen extends StatefulWidget {
