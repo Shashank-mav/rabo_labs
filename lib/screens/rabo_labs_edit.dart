@@ -69,7 +69,12 @@ class _ProfileEditState extends State<ProfileEdit> {
         clipBehavior: Clip.antiAlias,
         padding: const EdgeInsets.all(16),
         decoration: const BoxDecoration(
-          color: Colors.white,
+          color: Color.fromARGB(
+            250,
+            235,
+            255,
+            250,
+          ),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(16),
             topRight: Radius.circular(16),
@@ -126,6 +131,10 @@ class _ProfileEditState extends State<ProfileEdit> {
             Container(
               // height: 250,
               color: Color.fromARGB(153, 0, 200, 151),
+              // decoration: BoxDecoration(
+              //     // backgroundBlendMode: BlendMode.difference,
+              //     // gradient: Gradient(colors: [Color.fromARGB(0, 0, 0, 0)]),
+              //     boxShadow: [BoxShadow(offset: Offset.fromDirection(5, 0.8))]),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
@@ -150,6 +159,51 @@ class _ProfileEditState extends State<ProfileEdit> {
                 ],
               ),
             ),
+            Expanded(
+                child: ListView(
+              children: [
+                TextField(
+                  keyboardType: TextInputType.name,
+                  textInputAction: TextInputAction.done,
+                  decoration: InputDecoration(
+                      constraints: BoxConstraints(maxWidth: 50)),
+                  toolbarOptions:
+                      ToolbarOptions(copy: true, cut: true, paste: true),
+                ),
+                TextFormField(
+                  decoration: const InputDecoration(
+                      border: UnderlineInputBorder(),
+                      labelText: 'Enter your username'),
+                ),
+                Container(
+                    width: 30,
+                    child: TextField(
+                      cursorHeight: 20,
+                      autofocus: false,
+                      controller: TextEditingController(text: "Your name"),
+                      decoration: InputDecoration(
+                        hintText: "Enter your Name",
+                        contentPadding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 10),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.horizontal(),
+                          borderSide: BorderSide(color: Colors.grey, width: 2),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius:
+                              BorderRadius.vertical(top: Radius.circular(5)),
+                          borderSide:
+                              BorderSide(color: Colors.grey, width: 1.5),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          gapPadding: 0.0,
+                          borderRadius: BorderRadius.circular(30),
+                          borderSide: BorderSide(color: Colors.red, width: 1.5),
+                        ),
+                      ),
+                    )),
+              ],
+            ))
           ]),
         ));
   }

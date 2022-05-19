@@ -11,8 +11,8 @@ class HistoryPageState extends State<HistoryPage> {
         '08 May 2018', 'assets/images/ico_logo_red.png'),
     HistoryModel('assets/images/ico_send_money.png', 'Pathology\nbill paid',
         'Rabo Labs', 830.0, '08 May 2022', 'assets/images/ico_logo_red.png'),
-    HistoryModel('assets/images/ico_send_money.png', 'Blood\nTest',
-        'Rabo Labs', 830.0, '08 May 2022', 'assets/images/ico_logo_red.png'),
+    HistoryModel('assets/images/ico_send_money.png', 'Blood\nTest', 'Rabo Labs',
+        830.0, '08 May 2022', 'assets/images/ico_logo_red.png'),
     // HistoryModel('assets/images/ico_send_money.png', 'Received from', 'Rabo',
     //     30.0, '08 May 2022', 'assets/images/ico_logo_blue.png'),
   ];
@@ -21,19 +21,15 @@ class HistoryPageState extends State<HistoryPage> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      backgroundColor: Color(0xFFF4F4F4),
+      appBar: AppBar(
+          title: Text("Settlements"),
+          backgroundColor: Color.fromARGB(153, 0, 200, 151)),
       body: Container(
+        color: Color.fromARGB(250, 235, 255, 250),
+        padding: EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 30.0, horizontal: 16.0),
-              child: Text(
-                'My Payments History',
-                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 20.0),
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Container(
@@ -102,7 +98,7 @@ class HistoryPageState extends State<HistoryPage> {
   Widget _historyWidget(HistoryModel history) {
     return Container(
 //      height: 100.0,
-    margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
+      margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -126,7 +122,7 @@ class HistoryPageState extends State<HistoryPage> {
                       Text(
                         history.historyType,
                         style: TextStyle(fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.left,
+                        textAlign: TextAlign.left,
                       ),
                       Text(history.receiverName)
                     ],

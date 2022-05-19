@@ -21,7 +21,7 @@ class ProfileFooter extends StatelessWidget {
       children: [
         Padding(padding: EdgeInsets.only(left: 5, right: 0)),
         Card(
-            color: Color.fromARGB(255, 7, 177, 101),
+            color: Color.fromARGB(153, 0, 200, 151),
             child: ListTile(
               trailing: Icon(Icons.list_alt),
               // contentPadding: EdgeInsets.only(left: 0, right: 0),
@@ -34,7 +34,7 @@ class ProfileFooter extends StatelessWidget {
               // dense: true,
             )),
         Card(
-            color: Color.fromARGB(255, 7, 177, 101),
+            color: Color.fromARGB(153, 0, 200, 151),
             child: ListTile(
                 trailing: Icon(Icons.payment),
                 title: Text("Payments"),
@@ -44,7 +44,7 @@ class ProfileFooter extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => HistoryPage()));
                 })),
         Card(
-            color: Color.fromARGB(255, 7, 177, 101),
+            color: Color.fromARGB(153, 0, 200, 151),
             child: ListTile(
                 trailing: Icon(Icons.payment),
                 title: Text("Prices"),
@@ -54,7 +54,7 @@ class ProfileFooter extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => PriceSet()));
                 })),
         Card(
-            color: Color.fromARGB(255, 7, 177, 101),
+            color: Color.fromARGB(153, 0, 200, 151),
             child: ListTile(
                 trailing: Icon(Icons.quiz),
                 title: Text("FAQ"),
@@ -64,7 +64,7 @@ class ProfileFooter extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => FaqPage()));
                 })),
         Card(
-          color: Color.fromARGB(255, 7, 177, 101),
+          color: Color.fromARGB(153, 0, 200, 151),
           child: ListTile(
             trailing: Icon(Icons.info),
             title: Text("About"),
