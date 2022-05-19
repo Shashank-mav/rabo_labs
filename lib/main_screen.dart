@@ -5,6 +5,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:rabo_labs/navbar_key.dart';
 import 'package:rabo_labs/screens/feed.dart';
+import 'package:rabo_labs/screens/history_screen.dart';
 import 'package:rabo_labs/screens/home.dart';
 import 'package:rabo_labs/screens/message.dart';
 import 'package:rabo_labs/screens/rabo_labs_details.dart';
@@ -17,7 +18,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreen extends State<MainScreen> {
   var selectedIndex = 0;
-  final screen = [HomeScreen(), FeedScreen(), MessageScreen(), MemberProfile()];
+  final screen = [HomeScreen(), FeedScreen(), HistoryPage(), MemberProfile()];
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +34,18 @@ class _MainScreen extends State<MainScreen> {
             size: 30,
             color: const Color.fromRGBO(0, 200, 151, 1),
           ),
-          Icon((selectedIndex == 1) ? Icons.feedback : Icons.feedback,
-              color: const Color.fromRGBO(0, 200, 151, 1), size: 30),
-          Icon((selectedIndex == 2) ? Icons.settings : Icons.settings,
-              color: const Color.fromRGBO(0, 200, 151, 1), size: 30),
+          Icon(
+              (selectedIndex == 1)
+                  ? Icons.store_mall_directory_rounded
+                  : Icons.store_mall_directory_rounded,
+              color: const Color.fromRGBO(0, 200, 151, 1),
+              size: 30),
+          Icon(
+              (selectedIndex == 2)
+                  ? Icons.payment_rounded
+                  : Icons.payment_rounded,
+              color: const Color.fromRGBO(0, 200, 151, 1),
+              size: 30),
           Icon(
             (selectedIndex == 2) ? Icons.account_circle : Icons.account_circle,
             color: const Color.fromRGBO(0, 200, 151, 1),
@@ -49,9 +58,10 @@ class _MainScreen extends State<MainScreen> {
           });
         },
         animationCurve: Curves.easeInBack,
-        buttonBackgroundColor: Color.fromARGB(250, 235, 255, 250),
+        // buttonBackgroundColor: Color.fromARGB(250, 235, 255, 250),
         backgroundColor: Color.fromARGB(250, 235, 255, 250),
         animationDuration: const Duration(milliseconds: 300),
+        color: Color.fromARGB(250, 235, 255, 250),
       ),
       body: screen[selectedIndex],
     );

@@ -19,9 +19,9 @@ class ProfileFooter extends StatelessWidget {
             //     body:
             ListView(
       children: [
-        Padding(padding: EdgeInsets.only(left: 5, right: 0)),
-        Card(
-            color: Color.fromARGB(153, 0, 200, 151),
+        Padding(padding: EdgeInsets.only(left: 5, top: 10)),
+        Container(
+            color: Color.fromARGB(250, 235, 255, 250),
             child: ListTile(
               trailing: Icon(Icons.list_alt),
               // contentPadding: EdgeInsets.only(left: 0, right: 0),
@@ -33,8 +33,8 @@ class ProfileFooter extends StatelessWidget {
               },
               // dense: true,
             )),
-        Card(
-            color: Color.fromARGB(153, 0, 200, 151),
+        Container(
+            color: Color.fromARGB(250, 235, 255, 250),
             child: ListTile(
                 trailing: Icon(Icons.payment),
                 title: Text("Payments"),
@@ -43,8 +43,8 @@ class ProfileFooter extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HistoryPage()));
                 })),
-        Card(
-            color: Color.fromARGB(153, 0, 200, 151),
+        Container(
+            color: Color.fromARGB(250, 235, 255, 250),
             child: ListTile(
                 trailing: Icon(Icons.payment),
                 title: Text("Prices"),
@@ -53,8 +53,8 @@ class ProfileFooter extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => PriceSet()));
                 })),
-        Card(
-            color: Color.fromARGB(153, 0, 200, 151),
+        Container(
+            color: Color.fromARGB(250, 235, 255, 250),
             child: ListTile(
                 trailing: Icon(Icons.quiz),
                 title: Text("FAQ"),
@@ -63,8 +63,8 @@ class ProfileFooter extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => FaqPage()));
                 })),
-        Card(
-          color: Color.fromARGB(153, 0, 200, 151),
+        Container(
+          color: Color.fromARGB(250, 235, 255, 250),
           child: ListTile(
             trailing: Icon(Icons.info),
             title: Text("About"),
