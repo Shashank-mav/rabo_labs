@@ -55,38 +55,35 @@ class ProfileFooter extends StatelessWidget {
             ),
           ])),
           Container(
-              padding: EdgeInsets.only(bottom: 10),
-              child: Row(children: [
-                LinearPercentIndicator(
-                  // padding: EdgeInsets.only(top: 5),
-                  width: 300.0,
-                  lineHeight: 18.0,
-                  percent: 1,
-                  backgroundColor: Color.fromARGB(249, 174, 245, 227),
-                  progressColor: Color.fromARGB(153, 0, 200, 151),
-                  animation: true,
-                  animationDuration: 3000,
-                  restartAnimation: true,
-                  animateFromLastPercent: true,
-                  // fillColor: Color.fromARGB(153, 0, 200, 15),
-                  barRadius: Radius.elliptical(10, 10),
-                  // leading: Text("Tasks"),
-                  center: Text(
-                    "Tasks Completed :50/100",
-                    style: TextStyle(fontSize: 12),
-                  ),
-                  trailing: Lottie.network(
-                      "https://assets1.lottiefiles.com/packages/lf20_h4th9ofg.json",
-                      width: 30),
-
-                  // curve: Curves.bounceIn,
-                  // barRadius: ,
-                ),
-              ])),
+            padding: EdgeInsets.only(bottom: 10),
+            child: LinearPercentIndicator(
+              // padding: EdgeInsets.only(top: 5),
+              width: 300.0,
+              lineHeight: 18.0,
+              percent: 1,
+              backgroundColor: Color.fromARGB(249, 174, 245, 227),
+              progressColor: Color.fromARGB(153, 0, 200, 151),
+              animation: true,
+              animationDuration: 3000,
+              restartAnimation: true,
+              animateFromLastPercent: true,
+              // fillColor: Color.fromARGB(153, 0, 200, 15),
+              barRadius: Radius.elliptical(10, 10),
+              // leading: Text("Tasks"),
+              center: Text(
+                "Tasks Completed :50/100",
+                style: TextStyle(fontSize: 12),
+              ),
+              trailing: Lottie.network(
+                  "https://assets1.lottiefiles.com/packages/lf20_h4th9ofg.json",
+                  width: 30),
+              // curve: Curves.bounceIn,
+              // barRadius: ,
+            ),
+          ),
           Container(
-              // padding: EdgeInsets.only(bottom: 10),
-              child: Row(children: [
-            LinearPercentIndicator(
+            // padding: EdgeInsets.only(bottom: 10),
+            child: LinearPercentIndicator(
               // padding: EdgeInsets.only(top: 5),
               width: 300.0,
               lineHeight: 18.0,
@@ -110,7 +107,7 @@ class ProfileFooter extends StatelessWidget {
               // curve: Curves.bounceIn,
               // barRadius: ,
             ),
-          ]))
+          )
         ])),
         Container(
             color: Color.fromARGB(250, 235, 255, 250),
