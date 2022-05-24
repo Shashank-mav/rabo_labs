@@ -2,6 +2,7 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:lottie/lottie.dart';
 import 'package:rabo_labs/screens/rabo_labs_details.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +108,13 @@ class _ProfileEditState extends State<ProfileEdit> {
                         size: 50,
                       ),
                     )
-                  ]))
+                  ])),
+              SizedBox(
+                  // height: 20,
+                  // width: 20,
+                  child: Lottie.network(
+                "https://assets1.lottiefiles.com/packages/lf20_h4th9ofg.json",
+              ))
             ],
           ),
         ),

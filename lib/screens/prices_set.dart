@@ -57,7 +57,7 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
           return <Widget>[
             SliverAppBar(
               backgroundColor: Color.fromARGB(153, 0, 200, 151),
-              title: Text('Tab Controller Example'),
+              title: Text('Prices'),
               pinned: true,
               floating: true,
               forceElevated: boxIsScrolled,
@@ -71,8 +71,10 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
                     text: "Body Scans",
                   ),
                   Tab(
+                    // icon: Icon(Icons.home),
                     text: "Physiotherapy",
                   ),
+                  // DropdownButton(items: , onChanged: ),
                   Tab(
                     text: "surgery",
                   )
