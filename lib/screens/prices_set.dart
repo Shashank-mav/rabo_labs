@@ -50,6 +50,21 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
     //     ),
 
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+      // float
+      floatingActionButton: SizedBox(
+        height: 40,
+        width: 80,
+        child: FloatingActionButton(
+          child: Text("Submit"), //child widget inside this button
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          onPressed: () {
+            print("Button is pressed.");
+            //task to execute when this button is pressed
+          },
+        ),
+      ),
       backgroundColor: Color.fromARGB(250, 235, 255, 250),
       body: NestedScrollView(
         // controller: _scrollViewController,
@@ -94,21 +109,6 @@ class _SPriceSet extends State<PriceSet> with SingleTickerProviderStateMixin {
           controller: _tabController,
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   child: Icon(Icons.control_point),
-      //   onPressed: () {
-      //     _tabController.animateTo(1,
-      //         curve: Curves.bounceInOut, duration: Duration(milliseconds: 10));
-
-      //     _scrollViewController.animateTo(
-      //         _scrollViewController.position.minScrollExtent,
-      //         duration: Duration(milliseconds: 1000),
-      //         curve: Curves.decelerate);
-
-      //     _scrollViewController
-      //         .jumpTo(_scrollViewController.position.maxScrollExtent);
-      //   },
-      // ),
     );
   }
 }
