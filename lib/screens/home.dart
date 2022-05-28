@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rabo_labs/screens/prices_set.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,21 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Lab Name, City"),
         backgroundColor: Color.fromARGB(153, 0, 200, 151),
       ),
-      body: Text("hello"),
+      body: SizedBox(child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(width: double.infinity, height: 150, padding: const EdgeInsets.symmetric(horizontal:10),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => PriceSet()));
+            },
+            child: Card(
+              child: Center(child: Text('Go to Tests')),
+              ),
+          ),
+          )
+        ],
+      )),
     );
   }
 }
