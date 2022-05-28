@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:number_inc_dec/number_inc_dec.dart';
 
-class LabTestPrices extends StatelessWidget {
-  const LabTestPrices({ Key? key }) : super(key: key);
+class LabTestAdd extends StatelessWidget {
+  const LabTestAdd({ Key? key }) : super(key: key);
 
   
 
