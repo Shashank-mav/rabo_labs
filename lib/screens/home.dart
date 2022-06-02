@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rabo_labs/screens/login_screen.dart';
 import 'package:rabo_labs/screens/prices_set.dart';
 
 // ignore: use_key_in_widget_constructors
@@ -27,8 +28,18 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Center(child: Text('Go to Tests')),
               ),
           ),
-          )
-        ],
+          ),
+           Container(width: double.infinity, height: 150, padding: const EdgeInsets.symmetric(horizontal:10),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
+            },
+            child: Card(
+              child: Center(child: Text('Login Screen')),
+              ),
+      ),
+      ),
+      ],
       )),
     );
   }
